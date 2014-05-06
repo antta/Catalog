@@ -59,6 +59,16 @@ public class VMInstantiated {
 		return this.myManagedEntities.length == 0 ? true : false;
 
 	}
+	
+	public ArrayList<String> getListofVMName() {
+		
+		ArrayList<String> myList = new ArrayList<String>();
+		for (VirtualMachine vm : this.myVirtualMachines) {
+			myList.add(vm.getName());
+		}
+		
+		return myList;
+	}
 
 	public String showVMs() {
 

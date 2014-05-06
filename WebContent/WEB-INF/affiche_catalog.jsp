@@ -10,6 +10,7 @@
 </head>
 <body>
 	<% 	ArrayList<VMachine> listvm = (ArrayList<VMachine>)request.getAttribute("listevm");
+		int i = 0;
 	%>
 	<form action="myCatalog" method="post" >
 	<table>
@@ -26,9 +27,10 @@
 		<tr>
 		<td><% out.print(vm.getName()); %></td>
 		<td><% out.print(vm.getDescription()); %></td>
-		<td><input type="submit" name="button" value="Launch it !"/></td>
+		<td><input type="submit" name="<% out.print(vm.getName()); %>" value="Launch it !"/></td>
 		</tr>	
 		<%
+		i++;
 		}
 		%>
 		
