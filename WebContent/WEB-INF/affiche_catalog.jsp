@@ -15,7 +15,7 @@
 	<form action="myCatalog" method="post" >
 	<input class="recherche" type="search" placeholder="Entrez un mot-clef" name="the_search">
 	<input class="recherche" type="submit" name="recherche" value="Recherche">
-	<table>
+	<table border="1">
 		<caption>List of instantiated virtual machines</caption>
 		
 		<tr>
@@ -36,7 +36,7 @@
 		%>
 		
 	</table>
-	<table>
+	<table border="1">
 		<caption>List of virtual machines instanciables</caption>
 		
 		<tr>
