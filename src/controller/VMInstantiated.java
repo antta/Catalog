@@ -4,16 +4,10 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
-import java.util.Scanner;
+import controller.VMachine;
 
-import vmware.controller.VMachine;
-
-import com.vmware.vim25.MethodFault;
-import com.vmware.vim25.InvalidProperty;
-import com.vmware.vim25.RuntimeFault;
 import com.vmware.vim25.VirtualMachineCapability;
 import com.vmware.vim25.VirtualMachineConfigInfo;
-import com.vmware.vim25.mo.Datacenter;
 import com.vmware.vim25.mo.Folder;
 import com.vmware.vim25.mo.InventoryNavigator;
 import com.vmware.vim25.mo.ManagedEntity;

@@ -7,6 +7,6 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>CatalogServlets</servlet-name>
-    <url-pattern>/myCatalog</url-pattern>
+    <url-pattern>/</url-pattern>
   </servlet-mapping>
 </web-app>

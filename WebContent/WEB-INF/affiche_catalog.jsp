@@ -1,6 +1,6 @@
 <%@ page pageEncoding="UTF-8"%>
 <%@ page import="java.util.ArrayList"%>
-<%@ page import="vmware.controller.VMachine"%>
+<%@ page import="controller.VMachine"%>
 <!DOCTYPE html>
 <html>
 <head>

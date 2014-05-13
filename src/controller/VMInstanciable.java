@@ -6,7 +6,7 @@ import java.util.List;
 
 import com.vmware.vim25.mo.VirtualMachine;
 
-import vmware.controller.VMachine;
+import controller.VMachine;
 
 public class VMInstanciable {
 

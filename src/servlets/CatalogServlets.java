@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import vmware.controller.VMachine;
 import controller.VMInstanciable;
 import controller.VMInstantiated;
 import controller.VMpowerOps;
