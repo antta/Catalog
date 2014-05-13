@@ -133,14 +133,16 @@ public class VMInstantiated {
 				e.printStackTrace();
 			}
 			
-			description += "Guest OS:"+vm.getSummary().getConfig().getGuestFullName()+"<br/>";
-			description += "VM Version:"+vm.getConfig().getVersion()+"<br/>";
-			description += "CPU:"+vm.getConfig().getHardware().getNumCPU()+" vCPU"+"<br/>";
-			description += "Memory:"+vm.getConfig().getHardware().getMemoryMB()+" MB"+"<br/>";
-			description += "Memory Overhead:"+(long)vm.getConfig().getInitialOverhead().getInitialMemoryReservation()/1000000f+" MB"+"<br/>";
-			description += "VMware Tools:"+vm.getGuest().getToolsRunningStatus()+"<br/>";
-			description += "IP Addresses:"+vm.getSummary().getGuest().getIpAddress()+"<br/>";
-			description += "State:"+vm.getGuest().getGuestState()+"<br/>";
+			description += "<table align=\"center\">";
+			description += "<tr><td>Guest OS:</td><td>"+vm.getSummary().getConfig().getGuestFullName()+"</td></tr>";
+			description += "<tr><td>VM Version:</td><td>"+vm.getConfig().getVersion()+"</td></tr>";
+			description += "<tr><td>CPU:</td><td>"+vm.getConfig().getHardware().getNumCPU()+" vCPU"+"</td></tr>";
+			description += "<tr><td>Memory:</td><td>"+vm.getConfig().getHardware().getMemoryMB()+" MB"+"</td></tr>";
+			description += "<tr><td>Memory Overhead:</td><td>"+(long)vm.getConfig().getInitialOverhead().getInitialMemoryReservation()/1000000f+" MB"+"</td></tr>";
+			description += "<tr><td>VMware Tools:</td><td>"+vm.getGuest().getToolsRunningStatus()+"</td></tr>";
+			description += "<tr><td>IP Addresses:</td><td>"+vm.getSummary().getGuest().getIpAddress()+"</td></tr>";
+			description += "<tr><td>State:</td><td>"+vm.getGuest().getGuestState()+"</td></tr>";
+			description += "</table>";
 			
 			this.myVMs.add(new VMachine(name, description));
 		}

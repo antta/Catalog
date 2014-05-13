@@ -4,13 +4,19 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.vmware.vim25.mo.VirtualMachine;
+
 import vmware.controller.VMachine;
 
 public class VMInstanciable {
 
 	public File directory;
-	private List<VMachine> listVM;
+	private ArrayList<VMachine> listVM;
 	
+	public ArrayList<VMachine> getListVM() {
+		return listVM;
+	}
+
 	public VMInstanciable () {
 		this.directory = new File("/home/nicolas/listVM");
 		listVM = new ArrayList<VMachine>();
@@ -49,4 +55,15 @@ public class VMInstanciable {
 		
 		System.out.println(this.listVM.get(vmNumber).getDescription());
 	}
+	
+	public ArrayList<String> getListofVMName() {
+		
+		ArrayList<String> myList = new ArrayList<String>();
+		for (VMachine vm : this.listVM) {
+			myList.add(vm.getName());
+		}
+		
+		return myList;
+	}
+
 }
