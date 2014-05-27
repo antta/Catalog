@@ -14,17 +14,17 @@ import controller.VMpowerOps;
 
 public class CatalogServlets extends HttpServlet {
 
-	//final public VMInstantiated myVMInstatiated = new VMInstantiated("https://serveurbeta.univ-savoie.fr/sdk", "root", "dcfvgbh");
-	//final public VMInstantiated myVMInstatiated = new VMInstantiated("https://192.168.1.142/sdk", "root", "dcfvgbh");
-	final public VMInstantiated myVMInstatiated = new VMInstantiated("https://192.168.176.15/sdk", "root", "*master%lbdl+");
+	//final public VMInstantiated myVMInstatiated = new VMInstantiated("https://serveurbeta.univ-savoie.fr/sdk", "root", "");
+	//final public VMInstantiated myVMInstatiated = new VMInstantiated("https://192.168.1.142/sdk", "root", "");
+	final public VMInstantiated myVMInstatiated = new VMInstantiated("https://192.168.176.15/sdk", "root", "motdepasse");
 	
 	final public VMInstanciable myInstanciableVM = new VMInstanciable("/home/nicolas/listVM");
 	
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		//VMInstantiated myVMInstatiated = new VMInstantiated("https://serveurbeta.univ-savoie.fr/sdk", "root", "dcfvgbh");
-		//VMInstantiated myVMInstatiated = new VMInstantiated("https://192.168.176.15/sdk", "root", "*master%lbdl+");
+		//VMInstantiated myVMInstatiated = new VMInstantiated("https://serveurbeta.univ-savoie.fr/sdk", "root", "");
+		//VMInstantiated myVMInstatiated = new VMInstantiated("https://192.168.176.15/sdk", "root", "");
 		//VMInstanciable myInstanciableVM = new VMInstanciable("/home/nicolas/listVM");
 
 		request.setAttribute("listevm", myVMInstatiated.getMyVMs());
@@ -47,10 +47,10 @@ public class CatalogServlets extends HttpServlet {
 			if (request.getParameter(vmName) != null) {
 				System.out.println(vmName);
 				request.setAttribute("VMInstantiated", vmName);
-				//VMpowerOps myOps = new VMpowerOps("https://serveurbeta.univ-savoie.fr/sdk", "root", "dcfvgbh", "VM_demo", "poweron");
-				VMpowerOps myOps = new VMpowerOps("https://192.168.176.15/sdk", "root", "*master%lbdl+", vmName, "poweron");
-				//VMpowerOps myOps = new VMpowerOps("https://serveurbeta.univ-savoie.fr/sdk", "root", "dcfvgbh", vmName, "poweron");
-				//VMpowerOps myOps = new VMpowerOps("https://192.168.1.142/sdk", "root", "dcfvgbh", vmName, "poweron");
+				//VMpowerOps myOps = new VMpowerOps("https://serveurbeta.univ-savoie.fr/sdk", "root", "", "VM_demo", "poweron");
+				VMpowerOps myOps = new VMpowerOps("https://192.168.176.15/sdk", "root", "", vmName, "poweron");
+				//VMpowerOps myOps = new VMpowerOps("https://serveurbeta.univ-savoie.fr/sdk", "root", "", vmName, "poweron");
+				//VMpowerOps myOps = new VMpowerOps("https://192.168.1.142/sdk", "root", "", vmName, "poweron");
 				try {
 					myOps.go();
 				} catch (Exception e) {
